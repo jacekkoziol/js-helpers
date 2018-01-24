@@ -24,5 +24,14 @@ function generateTableResult(columnsNumber) {
     }
   });
 
-  console.log(arrAll);
+  console.log(arrAll, arrAll.chunk(columnsNumber));
+
+  let rows = [];
 }
+
+Array.prototype.chunk = function ( n ) {
+  if ( !this.length ) {
+      return [];
+  }
+  return [ this.slice( 0, n ) ].concat( this.slice(n).chunk(n) );
+};
