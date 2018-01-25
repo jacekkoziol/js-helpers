@@ -1,3 +1,4 @@
+/*
 * {
   margin: 0;
   padding: 0;
@@ -31,6 +32,11 @@
 ::after {
   box-sizing: inherit;
 }
+*/
+
+:root {
+  --border-color: #ccc;
+}
 
 body {
   color: #999;
@@ -42,4 +48,52 @@ h1 {
 
 .wrapper {
   padding: 15px;
+}
+
+.prime-table {
+  /* border: 1px solid var(--border-color); */
+  margin: 0 auto;
+  border-collapse: separate;
+  vertical-align: middle;
+  color: #000;
+}
+
+.prime-table tr {
+  background: #fff;
+}
+
+.prime-table tr:hover {
+  background: #0f0;
+}
+
+.prime-table td {
+  text-align: center;
+  border: 1px solid var(--border-color);
+  vertical-align: middle;
+  width: 50px;
+  height: 30px;
+  box-sizing: border-box;
+  padding: 0px;
+}
+
+.prime-table td.prime-number {
+  color: rgb(177, 7, 7);
+  background: rgb(255, 237, 136);
+}
+
+
+.prime-table td.prime-number.no-1 {
+  background: blue;
+}
+
+.prime-table td.prime-number.no-3 {
+  background: palevioletred;
+}
+
+.prime-table td.prime-number.no-7 {
+  background: green;
+}
+
+.prime-table td.prime-number.no-9 {
+  background:  purple;
 }
